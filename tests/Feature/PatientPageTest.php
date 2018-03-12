@@ -97,7 +97,7 @@ class PatientPageTest extends TestCase
     {
         $user = factory(\App\User::class)->states('admin')->create();
         $marEntry = factory(\App\MarEntry::class)->create();
-        $medName = App\Medication::find($marEntry->medication_id)->toString();
+        $medName = Medication::find($marEntry->medication_id)->toString();
         $response = $this->actingAs($user)->get('/patients/' . $marEntry->medical_record_number);
         $response->assertSee('<td> ' . $medName . ' </td>');
         $response->assertSee('<td> ' . $marEntry->instructions . ' </td>');

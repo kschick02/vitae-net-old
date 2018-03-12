@@ -63,11 +63,11 @@
     </div>
   </div>
 </div>
-<div class="col-md-12 panel panel-default">
+<div id="mar" class="col-md-12 panel panel-default">
   <div class="panel-heading">
     <h3>Medication Administration Record</h3>
   </div>
-  <table  class="table">
+  <table class="table">
     <tr>
       <th>Medication</th>
       <th>Instructions</th>
